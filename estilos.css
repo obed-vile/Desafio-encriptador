@@ -1,0 +1,254 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f9;
+    border-radius: 20px;
+    width: 100%;
+    margin: 60px auto;
+}
+
+/* Ajustes específicos para el header y logo */
+header {
+    position: relative;
+    top: 10px;
+    right: 20px;
+}
+
+.logo {
+    width: 120px;
+    height: 48px;
+    object-fit: contain;
+}
+
+/* Ajuste de las áreas de texto y salida */
+.output-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Centra el texto */
+    
+    margin-bottom: 30px;
+    margin-left: 200px; /* Ajusta este valor según lo necesites */
+    width: 35%;
+    
+}
+
+.text-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Centra el texto */
+    width: 100%;
+    margin-bottom: 30px;
+    margin-right: -300px;
+
+}
+
+textarea {
+    width: 80%;
+    height: 390px;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f4f4f9;
+    font-size: 16px;
+    resize: none;
+    margin-bottom: 15px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 30px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px); /* Efecto de elevación al pasar el cursor */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Sombra al pasar el cursor */
+}
+
+button:active {
+    transform: translateY(1px); /* Simula un clic hundiendo el botón */
+}
+
+#encryptBtn {
+    background-color: #0061f2;
+    color: #fff;
+    padding: 10px 80px;
+}
+
+#decryptBtn {
+    background-color: #ffffff;
+    color: #0061f2;
+    border: 2px solid #0061f2;
+    padding: 10px 80px;
+}
+
+/* Ajustes específicos para el textarea de salida */
+textarea#outputText {
+    background-color: #e9e9e9;
+    width: 350px;
+    height: 520px;
+    position: static;
+    z-index: 1;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+#copyBtn {
+    border-radius: 15px;
+    background-color: #0061f2;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 0px;
+    transition: all 0.3s ease;
+    margin-bottom: 0px;
+    padding: 10px 90px;
+}
+
+.output-image {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 15px;
+    opacity: 1;
+    z-index: 2;
+    margin-top: -490px;
+    pointer-events: none;
+}
+
+.no-message {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+    z-index: 3;
+    position: relative;
+    
+}
+
+.instruction-text {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    z-index: 3;
+    position: relative;
+    
+}
+
+footer {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Media Queries */
+
+/* Dispositivos móviles (Celulares) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px auto;
+    }
+    
+    .text-area, .output-area {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    textarea {
+        height: 250px;
+    }
+    
+    textarea#outputText {
+        width: 90%;
+        height: 250px;
+    }
+
+    .output-image {
+        display: none;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #copyBtn {
+        padding: 10px 130px;
+    }
+
+    .no-message,
+    .instruction-text {
+        top: -270px; /* Ajusta este valor para dispositivos móviles */
+    }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin: 40px auto;
+    }
+
+    .text-area, .output-area {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    textarea {
+        height: 350px;
+        
+    }
+    
+    textarea#outputText {
+        width: 90%;
+        height: 200px;
+    }
+
+    .output-image {
+        display: none;
+    }
+
+    .buttons {
+        gap: 15px;
+    }
+
+    #copyBtn {
+        padding: 10px 300px;
+        top: -150px;
+    }
+
+    .no-message,
+    .instruction-text {
+        top: -190px; /* Ajusta este valor para tablets */
+    }
+
+}
